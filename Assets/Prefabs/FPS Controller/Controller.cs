@@ -41,6 +41,8 @@ public class Controller : MonoBehaviour
     float m_SpeedAtJump = 0.0f;
 
     
+    public AudioSource footsteps;
+
 
     void Awake()
     {
@@ -143,7 +145,7 @@ public class Controller : MonoBehaviour
             currentAngles.x = m_VerticalAngle;
             CameraPosition.transform.localEulerAngles = currentAngles;
 
-
+            
 
             Speed = move.magnitude / (PlayerSpeed * Time.deltaTime);
 

@@ -7,12 +7,22 @@ using UnityEngine.Playables;
 public class Timelinestuff : MonoBehaviour
 {
     public PlayableDirector timeline;
+    private bool played;
 
-
-
+    private void Start()
+    {
+        played = false;
+    }
     private void OnTriggerEnter(Collider other)
     {
-        timeline.Play();
+       
+        if(played == false)
+        {
+            timeline.Play();
+            played = true;
+        }
+        
+        
 
     }
 
