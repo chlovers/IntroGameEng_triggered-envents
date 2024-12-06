@@ -164,6 +164,11 @@ public class Controller : MonoBehaviour
             {
                 //play a sound after being in air and landing
             }
+
+            if (Speed == 0)
+            {
+                footsteps.Play();
+            }
         }
 
     }
